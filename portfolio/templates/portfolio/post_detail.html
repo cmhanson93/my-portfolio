@@ -36,6 +36,7 @@
             </div>
             <strong>{{ comment.author }}</strong>
             <p>{{ comment.text|linebreaks }}</p>
+            <a class="btn btn-default" href="{% url 'comment_delete' pk=comment.pk %}"><span class="glyphicon glyphicon-trash"></span></a>
         </div>
         {% endif %}
       {% empty %}
