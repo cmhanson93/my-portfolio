@@ -12,6 +12,8 @@
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>{{ post.text|truncatechars:200 }}</p>
         </div>
+    {% empty %}
+      <p>No drafts have been submitted.</p>
     {% endfor %}
 {% endblock %}
   </body>
