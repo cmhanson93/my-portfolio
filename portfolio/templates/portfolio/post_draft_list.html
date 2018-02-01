@@ -6,6 +6,9 @@
   </head>
   <body>
     {% block content %}
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
     {% for post in posts %}
         <div class="post">
             <p class="date">created: {{ post.created_date|date:'d-m-Y' }}</p>
@@ -15,6 +18,9 @@
     {% empty %}
       <p>No drafts have been submitted.</p>
     {% endfor %}
+  </div>
+</div>
+</div>
 {% endblock %}
   </body>
 </html>
